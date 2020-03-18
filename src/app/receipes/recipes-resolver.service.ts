@@ -12,12 +12,13 @@ export class RecipesResolverService implements Resolve<RecipieModle []> {
     constructor(private DataStorageService: DataStorageService, private recipeService: RecipeService) { }
 
     resolve(route: ActivatedRouteSnapshot , state: RouterStateSnapshot) {
-        const recipes = this.recipeService.getRecipes();
-        if (recipes.length === 0) {
-            return this.DataStorageService.fetchRecipes();
-        } else {
-            return recipes;
-        }
+        // const recipes = this.recipeService.getRecipes();
+        // if (recipes.length === 0) {
+        //     return this.DataStorageService.fetchRecipes();
+        // } else {
+        //     return recipes;
+        // }
+        return this.DataStorageService.fetchRecipes();
     }
 
 }

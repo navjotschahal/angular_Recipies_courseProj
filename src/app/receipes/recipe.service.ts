@@ -12,13 +12,7 @@ export class RecipeService {
 
   recipesChanged = new Subject<RecipieModle[]>();
 
-  private receipes: RecipieModle[] = [
-    new RecipieModle('A test Recepie',
-      'This is a test only.',
-      'https://media.easemytrip.com/media/Blog/India/636977607425696252/636977607425696252QYiiUU.jpg',
-      [new IngredientModel('Wheat Floor', 2),
-                  new IngredientModel('Tomatos', 7)])
-  ];
+  private receipes: RecipieModle[] = [];
 
   constructor(private shoppingListService: ShoppingListService) {
 
